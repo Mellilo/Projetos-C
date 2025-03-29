@@ -15,3 +15,4 @@ int main (){
     printf("O carro favorito do %s é: %s\n", nome, carro_favorito);
 
     return 0;
+}

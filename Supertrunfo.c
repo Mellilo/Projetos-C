@@ -6,12 +6,12 @@ int main() {
 
 char Estado1, Codigo_da_carta1[4], Cidade1[50];
 int Populacao1, Numeros_de_pontos_turisticos1;
-float Area1, PIB1;
+float Area1, PIB1,Densidade_populacional1,PIB_per_capita1;
 
 //Declarando variavel da segunda carta
 char Estado2, Codigo_da_carta2[4], Cidade2[50];
 int Populacao2, Numeros_de_pontos_turisticos2;
-float Area2, PIB2;
+float Area2, PIB2,Densidade_populacional2,PIB_per_capita2;
 
 
 //Enunciado
@@ -64,6 +64,12 @@ scanf("%f", &PIB2);
 printf("Insira a quantidade de pontos turísticos disponíveis na cidade:\n");
 scanf("%d", &Numeros_de_pontos_turisticos2);
 
+PIB_per_capita1 = PIB1 / Populacao1;
+PIB_per_capita2 = PIB2 / Populacao2;
+Densidade_populacional1 = Populacao1 / Area1;
+Densidade_populacional2  = Populacao2 / Area2;
+
+
 //Immprindo primeira carta
 
 printf("\n\nA Primeira carta é:\n");
@@ -74,6 +80,8 @@ printf("A população da cidade é: %d habitantes\n",Populacao1);
 printf("A area da cidade é: %.0f\n",Area1);
 printf("O Pib da cidade é: %.0f\n",PIB1);
 printf("A quantidade de pontos turísticos da cidade são: %d\n",Numeros_de_pontos_turisticos1);
+printf("Densidade Populacional: %2.f hab/km²\n",Densidade_populacional1);
+printf("Pib per Capita: %2.f reais\n",PIB_per_capita1);
 
 //Immprindo segunda carta
 printf("\nA segunda carta é:\n");
@@ -84,6 +92,8 @@ printf("A população da cidade é: %d habitantes\n",Populacao2);
 printf("A area da cidade é: %.0f km²\n",Area2);
 printf("O Pib da cidade é: %.0f\n",PIB2);
 printf("A quantidade de pontos turísticos da cidade são: %d\n",Numeros_de_pontos_turisticos2);
+printf("Densidade Populacional: %2.f hab/km²\n",Densidade_populacional2);
+printf("Pib per Capita: %2.f reais\n",PIB_per_capita2);
 
 return 0;
 
